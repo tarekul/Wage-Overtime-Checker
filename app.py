@@ -2,6 +2,10 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+    return "Welcome to the Wage Overtime Checker!"
+
 @app.route('/check-pay', methods=['POST'])
 def check_pay():
     data = request.get_json()
