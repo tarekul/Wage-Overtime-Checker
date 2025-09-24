@@ -35,9 +35,18 @@ def check_pay():
         })
 
     
+    difference = expected_total_pay - total_pay_received
+    
+    if difference > 0:  # Underpaid
+        message = f"You may be missing ${difference:.2f}. Consider contacting your employer or labor board."
+    elif difference < 0:  # Overpaid
+        message = f"You appear to have been overpaid by ${abs(difference):.2f}. Double-check with your employer."
+    else:  # Paid correctly
+        message = "Your pay matches the expected amount. No discrepancies found."
+
     return jsonify({
         "expectedPay": expected_total_pay,
         "overtimeOwed": overtime_pay,
-        "underpayment": expected_total_pay - total_pay_received,
-        "message": "You may be missing " + str(expected_total_pay - total_pay_received) + ". Consider contacting your employer or labor board."
+        "underpayment": difference if difference > 0 else 0,
+        "message": message
     })
