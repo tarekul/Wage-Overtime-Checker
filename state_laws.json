@@ -13,5 +13,15 @@
     "min_wage": 7.25,
     "daily_overtime_hours": null,
     "daily_overtime_multiplier": 1.5
+  },
+  "FL": {
+    "min_wage": 13.0,
+    "daily_overtime_hours": null,
+    "daily_overtime_multiplier": 1.5
+  },
+  "MI": {
+    "min_wage": 12.48,
+    "daily_overtime_hours": null,
+    "daily_overtime_multiplier": 1.5
   }
 }
