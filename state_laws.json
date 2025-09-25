@@ -1,0 +1,17 @@
+{
+  "CA": {
+    "min_wage": 16.0,
+    "daily_overtime_hours": 8,
+    "daily_overtime_multiplier": 1.5
+  },
+  "NY": {
+    "min_wage": 15.0,
+    "daily_overtime_hours": null,
+    "daily_overtime_multiplier": 1.5
+  },
+  "TX": {
+    "min_wage": 7.25,
+    "daily_overtime_hours": null,
+    "daily_overtime_multiplier": 1.5
+  }
+}
